@@ -1,0 +1,161 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* Navbar */
+  .nav {
+    background-color: black;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  /* Content container */
+  .contentcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  /* Search bar */
+  .inputcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .inputcontainer input[type="search"] {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    width: 50%;
+    border: 1px solid #ddd;
+  }
+  
+  .inputcontainer button {
+    background-color: rgb(0, 130, 251);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  /* Sorting buttons */
+  .sortingbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .sortingbuttons button {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sortingbuttons button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Content table */
+  .tablecontainer {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  thead {
+    background-color:yellow;
+    color: black;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody td img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .imgc {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    /* Responsive table */
+    table {
+      width: 100%;
+    }
+  
+    table thead {
+      display: none;
+    }
+  
+    table tbody tr {
+      display: block;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+    }
+  
+    table tbody td {
+      display: block;
+      text-align: right;
+      font-size: 14px;
+      border-bottom: 1px dotted #ddd;
+    }
+  
+    table tbody td:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    tbody td:last-child {
+      border-bottom: 0;
+    }
+  }
+  
